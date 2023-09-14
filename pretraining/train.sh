@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python /content/drive/MyDrive/학부연구생/SimCTG/pretraining/train.py\
+    --model_name gpt2\
+    --train_path /content/drive/MyDrive/학부연구생/SimCTG_code/clean.csv\
+    --dev_path /content/drive/MyDrive/학부연구생/SimCTG_code/dev.txt\
+    --seqlen 32\
+    --number_of_gpu 1\
+    --batch_size_per_gpu 16\
+    --gradient_accumulation_steps 2\
+    --effective_batch_size 32\
+    --total_steps 200\
+    --print_every 50\
+    --save_every 50\
+    --learning_rate 2e-5\
+    --margin 0.5\
+    --save_path_prefix /content/drive/MyDrive/학부연구생/SimCTG_ver2s
